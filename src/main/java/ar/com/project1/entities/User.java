@@ -11,6 +11,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private String usuario;
     private String clave;
     private String nombre;
     private Boolean estado;
@@ -57,5 +58,13 @@ public class User implements Serializable {
 
     public void setRol(Roles rol) {
         this.rol = rol;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 }
